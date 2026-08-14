@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kubesec-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # REMPLACE par l'URL exacte de ton dépôt GitHub infra !
+    repoURL: 'https://github.com/davidzhangyyds/KubeSec-GitOps-infra.git'
+    targetRevision: HEAD
+    path: 'k8s-manifests' # Dossier contenant les manifestes K8s de ton app
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true     # Supprime les ressources du cluster si elles sont supprimées de Git
+      selfHeal: true  # Corrige automatiquement tout changement manuel non poussé sur Git !

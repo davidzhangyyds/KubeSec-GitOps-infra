@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: good-pod
+spec:
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 10001 # Utilise un ID utilisateur non-root
+  containers:
+  - name: app
+    image: bash
+    command: ["sleep", "3600"]

@@ -1,0 +1,26 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-root-user
+spec:
+  validationFailureAction: Enforce # "Enforce" bloque le pod, "Audit" se contente de logguer
+  rules:
+    - name: check-runAsNonRoot
+      match:
+        any:
+        - resources:
+            kinds:
+              - Pod
+      exclude:
+        any:
+        - resources:
+            namespaces:
+              - argocd
+              - kyverno
+              - kube-system
+      validate:
+        message: "SÉCURITÉ : Les conteneurs ne doivent pas s'exécuter en tant que root !"
+        pattern:
+          spec:
+            securityContext:
+              runAsNonRoot: true
