@@ -126,10 +126,8 @@ kubectl apply -f argocd/application.yaml
 
 Ce projet est sous licence MIT - libre pour utilisation et démonstration.
 
-```
+
 
 ---
 
-Tu peux ajouter ce texte à la racine de **`KubeSec-GitOps-infra`** dans un fichier `README.md` !
 
-```
