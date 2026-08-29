@@ -1,4 +1,4 @@
-```markdown
+
 # 🛡️ KubeSec GitOps & DevSecOps Platform
 
 Une plateforme Cloud-Native complète démontrant l'intégration de la sécurité à chaque étape du cycle de vie logiciel (**Shift Left Security**) et le déploiement continu piloté par les événements (**GitOps**).
@@ -25,7 +25,6 @@ Une plateforme Cloud-Native complète démontrant l'intégration de la sécurit�
     ├── Security Admission Controller (Kyverno - Policy: Enforce)
     └── Continuous Delivery & Auto-Healing (ArgoCD)
 
-```
 
 ---
 
