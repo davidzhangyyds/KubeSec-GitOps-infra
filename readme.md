@@ -24,7 +24,7 @@ Une plateforme Cloud-Native complète démontrant l'intégration de la sécurit�
     ├── Kubernetes (Kind / Cloud EKS)
     ├── Security Admission Controller (Kyverno - Policy: Enforce)
     └── Continuous Delivery & Auto-Healing (ArgoCD)
-
+```
 
 ---
 
