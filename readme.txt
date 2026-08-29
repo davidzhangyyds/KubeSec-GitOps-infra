@@ -1,7 +1,3 @@
-Voici le contenu complet et prêt à l'emploi pour le fichier **`README.md`** de ton projet. Tu peux le copier-coller directement à la racine de ton dépôt GitHub d'infrastructure.
-
----
-
 ```markdown
 # 🛡️ KubeSec GitOps & DevSecOps Platform
 
